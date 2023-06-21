@@ -1,0 +1,5 @@
+1. add preloader.
+2. bottom to top.
+3. slick slider.
+4. fixed navbar using js.
+5. add jQuery if needed.

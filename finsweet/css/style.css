@@ -1,0 +1,930 @@
+/* ============= google fonts ============== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* ============== common css ============= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 0.8;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+p,
+a,
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-weight: 500;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+/* ============= back to top button ============ */
+.backToTop{
+    background: #1C1E53;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    visibility: hidden;
+    z-index: 1111;
+}
+.backToTop i{
+    color: #fff;
+    font-size: 30px;
+}
+/* =================== nav section start here ============ */
+
+nav {
+    background: #1C1E53;
+    padding: 33px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all linear 0.3s;
+}
+.navFix{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    background: rgb(28, 30, 83,0.9);
+    border-bottom: 1px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all linear 0.3s;
+}
+.nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.menu ul li a {
+    color: #BBBBCB;
+    transition: all linear 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: #fff;
+}
+
+.menu p {
+    color: #BBBBCB;
+    transition: all linear 0.3s;
+}
+
+.menuBtn {
+    padding: 16px 48px;
+    border: 2px solid rgba(244, 246, 252, 0.2);
+    border-radius: 41px;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.menuBtn p {
+    line-height: 28px;
+}
+
+.menuBtn:hover a {
+    color: #fff;
+}
+
+.menuBtn:hover {
+    background: #FCD980;
+}
+
+.menuBtn:hover a {
+    color: #1B1C2B;
+}
+
+/* =================== nav section end here ============ */
+
+/* =================== banner section start here ============ */
+#banner {
+    background: #1C1E53;
+    padding: 213px 0 126px 0;
+}
+
+.banner_wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner_text {
+    width: 582px;
+}
+
+.banner_img {
+    width: 638px;
+}
+
+.banner_text h1 {
+    font-weight: 600px;
+    font-size: 54px;
+    line-height: 74px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.banner_text p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 28px;
+    padding-right: 70px;
+}
+
+.banner_btn_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.banner_btn {
+    padding: 16px 56px;
+    border-radius: 41px;
+    border: 2px solid rgba(244, 246, 252, 0.2);
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.banner_btn:hover {
+    background: #FCD980;
+}
+
+.banner_btn:hover a {
+    color: #1B1C2B;
+}
+
+.banner_btn a {
+    color: #fff;
+}
+
+#banner .banner_btn_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 41px;
+    border: 2px solid rgba(244, 246, 252, 0);
+    padding: 16px 56px;
+    transition: all linear 0.3s;
+}
+          /* =========== Common Button start ========== */
+.banner_btn_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all linear 0.3s;
+}
+.commonBtn:hover{
+    opacity: 0.7;
+}
+        /* =========== Common Button end ========== */
+#banner .banner_btn_price i {
+    font-size: 20px;
+}
+
+#banner .banner_btn_price p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+#banner .banner_btn_price:hover {
+    background: #FCD980;
+}
+
+#banner .banner_btn_price:hover {
+    color: #1B1C2B;
+}
+
+/* =================== banner section end here ============ */
+
+/* =================== work section start here ============ */
+#work {
+    background: #F4F6FC;
+    padding: 128px 0;
+}
+
+.work_wrapper {
+    display: flex;
+    gap: 142px;
+}
+
+.common_heading {
+    width: 405px;
+}
+
+.common_heading h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    color: #282938;
+}
+
+.common_heading p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #282938;
+    padding: 16px 0;
+}
+
+#work .banner_btn_price {
+    color: #2405F2;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    justify-content: start;
+}
+
+.work_card {
+    width: 656px;
+    color: #282938;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.work_card_items {
+    width: 328px;
+
+}
+
+.card_logo {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 16px;
+}
+
+.card_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work_card_items h3 {
+    margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.work_card_items p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+/* =================== work section end here ============ */
+/* =================== project section start here ============ */
+#project {
+    background: #fff;
+    padding: 128px 0;
+}
+
+#project .project_heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+}
+
+.project_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.project_left {
+    width: 843px;
+}
+
+.project_left_img {
+    width: 843px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_left_img img {
+    width: 100%;
+    left: 100%;
+    object-fit: cover;
+}
+
+.overly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+    width: 0%;
+    height: 100%;
+    padding: 0px 35px 0px 48px;
+    transition: all linear 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.project_left_img:hover .overly {
+    width: 50%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.overly .overly_heading {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    margin-top: 312px;
+}
+
+.overly .overly_heading h2 {
+    font-size: 24px;
+    font-weight: 600px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.overly .overly_heading p {
+    font-size: 16px;
+    font-weight: 500px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.overly_btn {
+    display: flex;
+    gap: 20px;
+    color: #FCD980;
+}
+
+.project_right {
+    width: 405px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project_right_img {
+    width: 405px;
+    height: 284px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_right_img .overly {
+    padding: 129px 36px 45px 56px;
+}
+
+.project_right_img .overly .overly_heading {
+    margin-top: 0px;
+}
+
+.project_right_img:hover .overly {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.project_right_img img {
+    width: 100%;
+    left: 100%;
+    object-fit: cover;
+}
+
+/* =================== project section end here ============ */
+/* =================== feature section start here ============ */
+#feature {
+    background: #F4F6FC;
+    padding: 128px 0;
+    color: #282938;
+}
+
+#feature .common_heading {
+    width: 100%;
+    text-align: center;
+}
+
+#feature .common_heading p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 12px;
+}
+
+#feature .common_heading h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    width: 630px;
+    margin: 0 auto;
+}
+
+.feature_items_main {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 32px;
+}
+
+.feature_items {
+    width: 404px;
+    background: #fff;
+    padding: 48px 31px 48px 48px;
+}
+
+.feature_logo {
+    margin-bottom: 25px;
+}
+
+.feature_items h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.feature_items p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* =================== feature section end here ============ */
+/* =================== review section start here ============ */
+#review {
+    background: rgba(244, 246, 252, 0.5);
+    padding: 128px 0;
+}
+
+.review-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 110px;
+}
+
+.review-wrapper .common_heading {
+    width: 327px;
+}
+
+#review .common_heading h2 {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 56px;
+    margin-bottom: 16px;
+}
+
+#review .common_heading p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.review_area {
+    width: 843px;
+}
+
+.review_items h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 48px;
+}
+
+.review_logo_area {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.review_logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.review_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review_person {
+    width: 200px;
+}
+
+.review_person h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+
+.review_person p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+/* =================== review section end here ============ */
+/* =================== question section start here ============ */
+#question {
+    background: #fff;
+    padding: 128px 0;
+}
+
+.question_wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 110px;
+}
+
+#question .common_heading {
+    width: 328px;
+}
+
+#question .common_heading h2 {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 56px;
+    margin-bottom: 16px;
+}
+
+#question .banner_btn_price {
+    color: #2405F2;
+    display: flex;
+    justify-content: start;
+}
+
+.question_items_area {
+    width: 846px;
+}
+
+.question_items:first-child {
+    padding-top: 5px;
+}
+
+.question_items {
+    display: flex;
+    column-gap: 60px;
+    padding: 32px 0;
+    border-bottom: 2px solid #ECECF1;
+    position: relative;
+}
+
+.question_items:last-child {
+    padding-bottom: 5px;
+    border-bottom: none;
+}
+
+.qSearial h4 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #2405F2;
+    line-height: 36px;
+}
+
+.qnaBtn {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+}
+
+.qna h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #282938;
+
+}
+
+.ans {}
+
+.ans p {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 16px 0 48px 0;
+    color: #282938;
+}
+
+/* =================== question section end here ============ */
+/* =================== mail section start here ============ */
+#mail {
+    /* background: #e2afaf; */
+    /* padding: 96px 0 48px 0; */
+}
+
+.mail_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#mail .common_heading {
+    width: 654px;
+    background: linear-gradient(rgba(28, 30, 83, 0.5), rgba(28, 30, 83, 0.5)), url("../images/mail.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 96px 96px 261px 96px;
+}
+
+#mail .common_heading h2 {
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+#mail .common_heading p {
+    color: #fff;
+}
+
+.mail_area {
+    width: 624px;
+    background: #1C1E53;
+    color: #fff;
+    padding: 96px 96px 48px 96px;
+}
+
+.mail_area h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 16px;
+}
+
+.mail_area p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+
+form input {
+    padding: 18px 18px 18px 32px;
+    width: 432px;
+    outline: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    caret-color: white;
+}
+
+form input::placeholder {
+    color: rgb(244, 246, 252, 0.5);
+}
+
+form input:last-of-type {
+    margin-bottom: 40px;
+}
+
+form .banner_btn_wrapper {
+    flex-direction: column;
+}
+
+form .banner_btn {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* =================== mail section end here ============ */
+/* =================== blog section start here ============ */
+#blog {
+    background: #fff;
+    padding: 128px 0;
+}
+
+#blog .common_heading {
+    margin-bottom: 64px;
+}
+
+.blog_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.blog_items {
+    width: 405px;
+}
+
+.blog_image {
+    height: 285px;
+    width: 405px;
+}
+
+.blog_image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog_text .date {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(40, 41, 56, 0.7);
+    margin: 40px 0 16px 0;
+}
+
+.blog_text h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #282938;
+}
+
+.blog_text .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(40, 41, 56, 0.7);
+    margin: 16px 0 32px 0;
+}
+
+.blog_text .banner_btn_price {
+    color: #282938;
+    display: flex;
+    justify-content: start;
+}
+
+/* =================== blog section end here ============ */
+/* =================== footer section start here ============ */
+footer {
+    background: #1C1E53;
+}
+
+.footer_wrapper {
+    display: flex;
+    padding-top: 95px;
+    column-gap: 260px;
+}
+
+.footer_logo {
+    width: 400px;
+}
+
+.footer_logo p {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.footer_talk {
+    width: 400px;
+}
+
+.footer_talk h3 {
+    font-weight: 600;
+    font-size: 48px;
+    color: #fff;
+}
+
+.footer_talk p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(244, 246, 252, 0.8);
+    padding: 14px 0 28px 0;
+}
+
+.footer_icons ul {
+    display: flex;
+    column-gap: 26px;
+}
+
+.footer_icons ul li {
+    transition: all linear 0.3s;
+}
+
+.footer_icons ul li:hover {
+    opacity: 0.7;
+}
+
+.footerTwo {
+    background: #1C1E53;
+}
+
+.footer_call {
+    width: 517px;
+    background: #FCD980;
+    padding: 17px 5px 16px 37px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.footer_call h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #282938;
+}
+
+.footer_call a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(40, 41, 56, 0.8);
+}
+
+/* =================== footer section end here ============ */
+/* =================== copyright section start here ============ */
+/* =================== copyright section end here ============ */
+#copyright {
+    padding: 32px 0;
+    background: #fff;
+}
+
+#copyright a {
+    color: #282938;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    transition: all linear 0.3s;
+}
+#copyright a:hover{
+    opacity: 0.8;
+}
+.copyright_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerMenu ul {
+    display: flex;
+    gap: 30px;
+}
+
+/* =================== nav section start here ============ */
+/* =================== nav section end here ============ */

@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 0.8;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* ================== pre loader ================= */
+.preLoader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    z-index: 100;
+}
+
+.loader {
+    background: url(../images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    z-index: 101;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: preLoader 3s 2s infinite;
+}
+
+@keyframes preLoader {
+
+    50% {
+        margin-left: 900px;
+    }
+
+}
+
+/* ============== Go to top ============= */
+.goToTop {
+    background: url(..//images/fav.png);
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    cursor: pointer;
+    animation: goTop 1s 2s infinite;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+
+@keyframes goTop {
+    50% {
+        margin-bottom: 8px;
+        opacity: 0.7;
+    }
+
+    100% {
+        margin-bottom: 0px;
+    }
+}
+
+/* ============ navbar section start here =========== */
+#nav {
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all linear 0.3s;
+}
+
+#nav.fixNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 0;
+    background: #f7dde9ee;
+    box-shadow: 0 0 10px #d50a5194;
+    z-index: 10;
+    transition: all linear 0.3s;
+}
+
+.menubar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.menu>ul {
+    display: flex;
+    gap: 25px;
+}
+
+.menu>ul>li>a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    text-transform: capitalize;
+    transition: all linear 0.3s;
+}
+
+.menu ul li a {
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: url(..//images/menuHover.png);
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+
+.menu ul li a:hover::after {
+    opacity: 1;
+    bottom: -30px;
+    visibility: visible;
+}
+
+.login a {
+    display: inline-block;
+    padding: 15px 20px;
+    background: transparent;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #d50a51;
+    border: 1px solid #d50a51;
+    text-transform: capitalize;
+    transition: all linear 0.3s;
+}
+
+.login i {
+    margin-right: 8px;
+}
+
+.menu>ul>li>a:hover {
+    color: #d50a51;
+}
+
+.login a:hover {
+    background: #d50a51;
+    color: #fff;
+}
+
+/* ============ navbar section end here =========== */
+
+/* ============ banner section start here =========== */
+#banner {
+    background: radial-gradient(#ffffff, #fdedf4);
+    padding-top: 225px;
+}
+
+.bannerArea {
+    display: flex;
+    gap: 30px;
+}
+
+.bannerImg {
+    position: relative;
+    width: 570px;
+}
+
+.bannerImg img {
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+}
+
+.bannerText {
+    text-align: center;
+    width: 570px;
+}
+
+.bannerText h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 61px;
+    color: #8a5e3b;
+    text-transform: uppercase;
+}
+
+.bannerText h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 84px;
+    color: #d50a51;
+    text-transform: capitalize;
+}
+
+.bannerText p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444;
+    text-transform: capitalize;
+    line-height: 26px;
+    padding: 30px 0 60px 0;
+}
+
+.bannerLink {
+    text-align: center;
+}
+
+.bannerLink a {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 1px solid #d50a51;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    color: #d50a51;
+    transition: all linear 0.3s;
+}
+
+#banner .bannerLink {
+    padding-bottom: 140px;
+}
+
+.bannerLink a:hover {
+    color: #fff;
+    background: #d50a51;
+    border: 1px solid #fff;
+}
+
+/* ============ banner section end here =========== */
+/* ============ history section start here =========== */
+#history {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.historyFlex {
+    display: flex;
+    gap: 30px;
+}
+
+.historyImg {
+    width: 570px;
+}
+
+.historyText {
+    width: 570px;
+    padding-top: 30px;
+}
+
+.heading h3,
+.heading h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #666666;
+}
+
+.heading {
+    padding-left: 45px;
+    position: relative;
+}
+
+.heading::before {
+    content: url(../images/love.png);
+    position: absolute;
+    top: -30px;
+    left: -8px;
+}
+
+.heading h2 {
+    font-size: 32px;
+    color: #d50a51;
+    padding: 10px 0 60px 0px;
+}
+
+.historyText p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444;
+    line-height: 24px;
+}
+
+/* ============ history section end here =========== */
+/* ============ proposal section start here =========== */
+#proposal {
+    background: #fff7da;
+    padding: 60px 0 0 0;
+}
+
+.proposalFlex,
+.ticketFlex {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.proposalImg {
+    width: 470px;
+    position: relative;
+}
+
+.proposalImg img {
+    position: absolute;
+    right: -70px;
+    bottom: -45px;
+}
+
+.proposalText {
+    width: 570px;
+    margin-left: 100px;
+}
+
+#proposal .bannerLink {
+    padding: 30px 0 60px 0;
+    display: flex;
+    gap: 15px;
+}
+
+#proposal .bannerLink a {
+    display: inline-block;
+}
+
+/* ============ proposal section end here =========== */
+/* ============ ticket section start here =========== */
+#ticket {
+    background: #ffffff;
+    padding: 125px 0 100px 0;
+}
+
+#ticket .bannerLink {
+    padding-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.ticketImg {
+    width: 570px;
+    position: relative;
+}
+
+.ticketImg img {
+    position: absolute;
+    top: 0;
+    left: -90px;
+}
+
+.ticketText {
+    width: 570px;
+}
+
+.ticketText .heading {
+    text-align: right;
+    margin-right: 47px;
+    position: relative;
+}
+
+.ticketText .heading::before {
+    content: url(../images/loveTwo.png);
+    position: absolute;
+    top: -32px;
+    right: -50px;
+}
+
+.ticketText p {
+    text-align: right;
+}
+
+/* ============ ticket section end here =========== */
+/* ============ offer section start here =========== */
+#offer {
+    background: radial-gradient(#ffffff, #fdedf4);
+    padding: 60px 0;
+}
+
+.offerText {
+    width: 370px;
+    /* border: 1px solid red; */
+}
+
+.offerFlex {
+    display: flex;
+    gap: 30px;
+}
+
+.offerCard {
+    width: 770px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cardArea {
+    width: 370px;
+    padding: 30px;
+    transition: all linear 0.3s;
+}
+
+.cardArea:hover {
+    background: #f1f1f1;
+    box-shadow: 0 0 10px #dad7d8;
+    border-right: 3px solid #d50a51;
+}
+
+.cardHeading {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    text-transform: capitalize;
+}
+
+.cardHeading h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #d50a51;
+}
+
+.cardDes p {
+    padding-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444;
+    line-height: 26px;
+}
+
+/* ============ offer section end here =========== */
+/* ============ shots section start here =========== */
+#shots {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.shotsFlex {
+    display: flex;
+    gap: 30px;
+}
+
+.shotsImg {
+    width: 770px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.shotsImgCard {
+    width: 370px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shotsImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shotsIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 0;
+    background: rgba(16, 24, 32, 0.8);
+    padding-top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+
+.shotsImgCard:hover .shotsIcons {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+
+.shotsIcons ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.shotsIcons ul li a i {
+    height: 37px;
+    width: 37px;
+    margin: 0px 15px 20px 0;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.3s;
+}
+
+.shotsIcons ul li a i:hover {
+    background: #d50a51;
+    border: 1px solid #d50a51;
+}
+
+.shotsDes h3 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.shotsFooter {
+    display: flex;
+    color: #fff;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.shotsFooter span {
+    padding-right: 3px;
+}
+
+.shotsFooter p {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.shotsText {
+    width: 370px;
+    text-align: right;
+}
+
+.shotsText .heading {
+    margin-right: 47px;
+}
+
+.shotsText .heading::before {
+    content: url(../images/loveTwo.png);
+    top: -30px;
+    right: -50px;
+}
+
+.shotsText .bannerLink {
+    padding-top: 30px;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+
+/* ============ shots section end here =========== */
+/* ============ counter section start here =========== */
+#counter {
+    background: url(../images/count.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0;
+}
+
+.nextV {
+    /* background: #FCEFF6; */
+    color: #d50a51;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.countFlex {
+    display: flex;
+    gap: 70px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.count {
+    width: 270px;
+    text-align: center;
+    position: relative;
+}
+
+.countImg {
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.count h3,
+.count h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: capitalize;
+    color: #d50a51;
+}
+
+.count h4 {
+    padding-top: 7px;
+    color: #444444;
+    font-size: 32px;
+}
+
+/* ============ counter section end here =========== */
+/* ============ review section start here =========== */
+#review {
+    background: #ffffff;
+    padding: 140px 0 150px 0;
+}
+
+.reviewFlex {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.reviewFlex::after {
+    content: url(../images/smsLoveOne.png);
+    position: absolute;
+    top: -45px;
+    left: -45px;
+}
+
+.reviewFlex::before {
+    content: url(../images/smsLoveTwo.png);
+    position: absolute;
+    bottom: -48px;
+    right: -43px;
+}
+
+.reviewCard {
+    width: 570px;
+    background: #fffae2;
+    padding: 45px 35px 30px 30px;
+    box-shadow: 0 0 10px #a3a0a0;
+}
+
+.reviewCard p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    line-height: 26px;
+}
+
+.reviewFooter {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.reviewTitle {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.reviewTitle h3 {
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #222;
+}
+
+.reviewTitle h4 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #444;
+}
+
+.reviewImg {
+    padding-right: 20px;
+}
+
+.reviewImg img {}
+
+.btnOne {
+    position: absolute;
+    top: 50%;
+    right: -73px;
+    transform: translateY(-50%);
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 1px solid #d50a51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear 0.3s;
+}
+
+.btnTwo {
+    position: absolute;
+    top: 50%;
+    left: -73px;
+    transform: translateY(-50%);
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 1px solid #d50a51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear 0.3s;
+}
+
+.btnOne a i,
+.btnTwo a i {
+    color: #d50a51;
+}
+
+.btnOne:hover a i,
+.btnTwo:hover a i {
+    color: #fff;
+}
+
+.btnOne:hover,
+.btnTwo:hover {
+    background: #d50a51;
+}
+
+/* ============ review section end here =========== */
+/* ============ footer section start here =========== */
+#footer {
+    background: radial-gradient(#ffffff, #fdedf4);
+    padding: 80px 0 30px 0;
+}
+
+#footer .container {
+    position: relative;
+}
+
+.newsLetter {
+    background: #d50a51;
+    padding: 30px 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #fff;
+    gap: 30px;
+    position: absolute;
+    top: -80px;
+    /* top: -25%; */
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+}
+
+.nlLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nlLogo i {
+    font-size: 45px;
+}
+
+.logoText {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logoText h2 {
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logoText p {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    word-spacing: 2px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    width: 270px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.form input:nth-child(2) {
+    width: 230px;
+    text-transform: none;
+}
+
+.form input:first-child {
+    margin-right: 30px;
+}
+
+.form input::placeholder {
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.form button {
+    border-radius: 5px;
+    width: 40px;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: -5px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.form button:hover {
+    background: #fff;
+    color: #d50a51;
+}
+
+.footerLogo {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 370px;
+    padding: 60px 0;
+}
+
+.footerText i {
+    height: 42px;
+    width: 42px;
+    background: #d50a51;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerText p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    line-height: 26px;
+    width: 220px;
+}
+
+.follow {
+    text-align: center;
+}
+
+.follow h2 {
+    padding-bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d50a51;
+    text-transform: capitalize;
+}
+
+.follow ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.follow ul li {}
+
+.follow ul li a {}
+
+.follow ul li a i {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #d50a51;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d50a51;
+    transition: all linear 0.3s;
+}
+
+.follow ul li a i:hover {
+    background: #d50a51;
+    color: #fff;
+    transform: rotate(360deg);
+}
+
+
+/* ================ copyright section =========== */
+.copyright {
+    background: #fce1ed;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+}
+
+.copyright span {
+    padding-left: 5px;
+    text-transform: uppercase;
+    color: #d50a51;
+}
+
+/* ============ footer section end here =========== */

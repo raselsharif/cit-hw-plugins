@@ -1,0 +1,1060 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========== common CSS ========== */
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 0.8;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #95E1D3;
+    border-radius: 10px;
+    background: #95E1D3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(249, 224, 142, 0.9));
+    border-radius: 10px;
+}
+
+::selection{
+    color: #000;
+    background: #0ee4c7;
+}
+
+/* ========== pre loader ========== */
+.preLoader {
+    position: fixed;
+    z-index: 13;
+    width: 100%;
+    font-family: 'Prompt', sans-serif;
+    background-color: #E99184;
+    color: #fff;
+    font-size: 5vw;
+    transition: all linear 0.3s;
+}
+
+#app {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.container_loader {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#app {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+/* ========= go to top ========= */
+
+.goToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 40px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: #E99184;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 11;
+    /* transition: all linear 0.3s; */
+    visibility: hidden;
+    display: none;
+}
+
+.goToTop:hover {
+    opacity: 0.8;
+}
+
+.goToTop i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.goToTop_anim {
+    position: fixed;
+    bottom: 98px;
+    right: 30px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 12;
+    visibility: hidden;
+    display: none;
+}
+
+/* ============= container ============= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============= scroll indicator ========= */
+/* Style the header: fixed position (always stay at the top) */
+.headerOne {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 4px;
+    background: #0ee4c7;
+}
+
+/* ========== common heading ============ */
+.header {
+    text-align: center;
+}
+
+.header h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 24px;
+    color: #333;
+}
+
+.header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+}
+
+.header h2::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header p {
+    margin-top: 92px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 24px;
+    padding: 0 100px;
+}
+
+/* ========= navbar section start here ========== */
+.testBtn {
+    background: bisque;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#nav {
+    background-color: transparent;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all linear 0.3s;
+}
+
+#nav.fixNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: linear-gradient(rgba(249, 224, 142, 0.9), rgba(243, 129, 129, 0.9));
+    z-index: 10;
+    transition: all linear 0.3s;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menubar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+}
+
+.menubar ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14x;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    transition: all linear 0.3s;
+}
+
+.menubar ul li a:hover {
+    color: #fce38a;
+}
+
+.menubar ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fce38a;
+    bottom: -12px;
+    left: 10%;
+    transform: translateX(-50%);
+    transition: all linear 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menubar ul li a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    /* bottom: -12px; */
+    left: 50%;
+
+}
+
+/* =========== active menu =========== */
+.active a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.active a {
+    color: #000 !important;
+}
+
+.active a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fce38a;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear 0.3s;
+}
+
+/* ========= navbar section end here ========== */
+
+/* ========= banner section start here ========== */
+#banner {
+    background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(249, 224, 142, 0.9)), url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 230px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.bannerText {}
+
+.bannerText h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.bannerText h1 {
+    margin-top: 70px;
+    margin-bottom: 126px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 150px;
+    padding: 0 150px;
+    text-transform: uppercase;
+    line-height: 140px;
+    position: relative;
+}
+
+.bannerText h1::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    bottom: -72px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bannerText a {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: 3px solid #fff;
+    border-radius: 7px;
+    transition: all linear 0.3s;
+}
+
+.bannerText a:hover {
+    color: rgb(237, 198, 139);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* ========= banner section end here ========== */
+
+/* ========= about-us section start here ========== */
+#about {
+    padding-top: 90px;
+}
+
+.aboutImages {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.imageCard {
+    position: relative;
+    width: 380px;
+    height: 250px;
+}
+
+.imageCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageOverly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(249, 224, 142, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.imageOverly i {
+    font-size: 35px;
+}
+
+.imageCard:hover .imageOverly {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========= about-us section end here ========== */
+
+/* ========= counter section start here ========== */
+#counter {
+    background: #95e1d3;
+    padding: 90px 0;
+    color: #fff;
+}
+
+.counterFlex {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.count {
+    width: 20%;
+    text-align: center;
+}
+
+.count h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    padding-bottom: 30px;
+}
+
+.count p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* ========= counter section end here ========== */
+
+/* ========= service section start here ========== */
+#service {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.serviceFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 66px;
+    row-gap: 100px;
+    flex-wrap: wrap;
+    padding-top: 112px;
+}
+
+.serviceItems {
+    display: flex;
+    gap: 30px;
+    width: 345px;
+}
+
+.serviceText h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+.serviceText p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #b6b6b6;
+    line-height: 24px;
+}
+
+/* ========= service section end here ========== */
+
+/* ========= quote section section start here ========== */
+#quote {
+    padding: 70px 0;
+    background: #f8f8f8;
+}
+
+#quote .container {
+    position: relative;
+}
+
+.quote_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 24px;
+    transition: all linear 0.3s;
+}
+
+.quote_prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 24px;
+    transition: all linear 0.3s;
+}
+
+.quote_next:hover {
+    font-size: 26px;
+    color: #333333;
+}
+
+.quote_prev:hover {
+    font-size: 26px;
+    color: #333333;
+}
+
+.quoteCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0 76px;
+}
+
+.quoteImageArea {
+    padding: 40px;
+    border: 2px solid #95e1d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quoteImage {
+    height: 66px;
+    width: 66px;
+}
+
+.quoteImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.quoteText {}
+
+.quoteText p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 36px;
+    color: #a7a7a7;
+    padding-bottom: 30px;
+}
+
+.quoteText h4 {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333333;
+    text-transform: capitalize;
+    display: inline-block;
+    position: relative;
+    margin-left: 72px;
+}
+
+.quoteText h4::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    top: 50%;
+    left: -67px;
+}
+
+/* ========= quote section section end here ========== */
+
+/* ========= team section start here ========== */
+#team {
+    padding: 100px 0;
+}
+
+.teamFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.teamImageCard {
+    padding-top: 95px;
+    width: 380px;
+}
+
+.teamImage {
+    width: 380px;
+    height: 470px;
+    position: relative;
+}
+
+.teamImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.teamOverly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(249, 224, 142, 0.9));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.teamImage:hover .teamOverly {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.teamOverly a {
+    padding: 15px 22px;
+    background: #fce38a;
+    color: #f38181;
+    font-size: 20px;
+    transition: all linear 0.3s;
+    border-right: 1px solid #f9bd87;
+}
+
+.teamOverly a:hover {
+    background: #f38181;
+    color: #fff;
+}
+
+.teamText {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.teamText h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    padding-bottom: 16px;
+}
+
+.teamText p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    text-transform: capitalize;
+    color: #afafaf;
+}
+
+
+
+/* ========= team section end here ========== */
+
+/* ========= work section start here ========== */
+#work {
+    overflow: hidden;
+}
+
+.workFlex {
+    padding: 100px 0;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.middle {
+    width: 25%;
+}
+
+.middle .workImageArea {
+    width: 100%;
+    /* width: 480px; */
+    height: 780px;
+}
+
+.middle .workImageCard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right .workImageArea {
+    width: 100%;
+}
+
+.workImageArea {
+    /* width: 480px; */
+    width: 50%;
+    position: relative;
+}
+
+.workImageCard {
+    /* width: 480px; */
+    width: 100%;
+    height: 390px;
+}
+
+.workImageCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.workImageOverly {
+    transform: rotate(350deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 0;
+    background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(249, 224, 142, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transform: rotate(350deg);
+    -moz-transform: rotate(350deg);
+    -ms-transform: rotate(350deg);
+    -o-transform: rotate(350deg);
+}
+
+.workImageArea:hover .workImageOverly {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+
+}
+
+.workImageOverly h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fdefe5;
+}
+
+.workImageOverly p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    color: #fef4eb;
+}
+
+/* ========= work section end here ========== */
+
+/* ========= footer section start here ========== */
+#footer {
+    padding: 70px 0;
+    background: #f8f8f8;
+}
+
+.footerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.mogo {
+    width: 463px;
+    margin-right: 45px;
+}
+
+.mogo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: #cccccc;
+}
+
+.mogo p:nth-child(2) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #999999;
+    line-height: 24px;
+    padding: 40px 0 50px 0;
+}
+
+.mogo p:nth-child(3) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+}
+
+.mogo p span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333333;
+    margin-right: 8px;
+}
+
+.mogoLink {
+    padding: 20px 0 40px 0;
+    display: flex;
+    column-gap: 20px;
+}
+
+.mogoLink p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #a7a7a7;
+    text-transform: capitalize;
+}
+
+.mogoLink ul {
+    display: flex;
+
+}
+
+.mogoLink ul li a {
+    color: #95e1d3;
+    padding: 7px;
+    border-radius: 7px;
+    transition: all linear 0.3s;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+
+.mogoLink ul li a:hover {
+    background: #95e1d3;
+    color: #fff;
+}
+
+#email {
+    padding: 14px;
+    outline: none;
+}
+
+#submit {
+    text-transform: uppercase;
+    background: #95e1d3;
+    border: none;
+    margin-left: 0px;
+    padding: 14px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit:hover {
+    opacity: 0.8;
+}
+
+.blogs {
+    width: 337px;
+    margin-right: 50px;
+    /* border: 1px solid blue; */
+}
+
+.blogs>h3,
+.insta>h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.blogCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.blogImage {
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+    transition: all linear 0.3s;
+    /* border: 1px solid red; */
+}
+
+.blogImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogText p {
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #333333;
+    text-transform: uppercase;
+    line-height: 18px;
+    padding-bottom: 12px;
+    /* border: 1px solid yellow; */
+}
+
+.blogText h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    font-style: italic;
+    color: #b4b4b4;
+}
+
+.insta {
+    width: 270px;
+}
+
+.instaFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.instaImage {
+    width: 88px;
+    height: 88px;
+    transition: all linear 0.3s;
+    overflow: hidden;
+}
+
+.instaImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogImage img:hover,
+.instaImage img:hover {
+    transform: scale(120%) rotate(-2deg);
+    opacity: 0.9;
+
+}
+
+.readMore {
+    padding-top: 10px;
+}
+
+.readMore a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    font-style: italic;
+    color: #333;
+}
+
+/* ========= footer section end here ========== */
+
+/* ========= copyright section start here ========== */
+.copyright {
+    border-top: 1px solid #e5e5e5;
+    padding: 25px 0;
+    background: #f8f8f8;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #595959;
+}
+
+.copyright span {
+    color: #f38181;
+}
+
+/* ========= copyright section end here ========== */
+
+/* ========= navbar section start here ========== */
+/* ========= navbar section end here ========== */
